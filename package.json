@@ -5,15 +5,25 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "types": "tsc --noEmit",
+    "post-update": "yarn upgrade --latest"
   },
   "dependencies": {
-    "next": "10.2.3",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "@material-ui/core": "4.12.1",
+    "@material-ui/icons": "^4.11.2",
+    "clsx": "latest",
+    "next": "^11.0.1",
+    "next-auth": "^3.27.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sqlite3": "^5.0.2"
   },
   "devDependencies": {
-    "@types/react": "17.0.11",
-    "typescript": "4.3.2"
+    "@next/codemod": "^11.0.1",
+    "@types/node": "^16.3.2",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "typescript": "4.3.5"
   }
 }
