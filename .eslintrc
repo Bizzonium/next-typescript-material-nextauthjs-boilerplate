@@ -1,0 +1,27 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  // "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    // "plugin:@typescript-eslint/recommended",
+    "airbnb", 
+    "next", 
+    "next/core-web-vitals"
+  ],
+  "plugins": [
+    "react"
+    // "@typescript-eslint"
+  ],
+  "rules": {
+    // "comma-dangle": ["error", "always-multiline"],
+    "react/jsx-filename-extension": [
+      "warn", {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"] 
+      }
+  ]
+  }
+}

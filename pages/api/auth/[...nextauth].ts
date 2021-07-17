@@ -1,5 +1,5 @@
-import NextAuth from "next-auth"
-import Providers from "next-auth/providers"
+import NextAuth from 'next-auth';
+import Providers from 'next-auth/providers';
 
 const maxAge = 1 * 24 * 60 * 60; // 1 day
 
@@ -10,7 +10,7 @@ export default NextAuth({
   providers: [
     Providers.Discord({
       clientId: process.env.DISCORD_CLIENT_ID,
-      clientSecret: process.env.DISCORD_CLIENT_SECRET
+      clientSecret: process.env.DISCORD_CLIENT_SECRET,
     }),
     // Providers.Email({
     //   server: process.env.EMAIL_SERVER,
@@ -57,8 +57,9 @@ export default NextAuth({
     encryptionKey: process.env.JWT_ENCRYPTION_KEY,
     verificationOptions: {
       maxTokenAge: `${maxAge}s`, // e.g. `${30 * 24 * 60 * 60}s` = 30 days
-      algorithms: ['HS512']
+      algorithms: ['HS512'],
     },
+    maxAge: maxAge,
     // You can define your own encode/decode functions for signing and encryption
     // if you want to override the default behaviour.
     // encode: async ({ secret, token, maxAge }) => {},
@@ -98,4 +99,4 @@ export default NextAuth({
 
   // Enable debug messages in the console if you are having problems
   debug: false,
-})
+});
